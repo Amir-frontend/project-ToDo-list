@@ -1,0 +1,22 @@
+
+
+src/
+├── context/
+│   └── TaskContext.jsx        ← إدارة الحالة العامة
+│
+├── components/
+│   ├── TaskInput.jsx          ← إضافة المهام
+│   ├── TaskList.jsx           ← عرض المهام
+│   ├── TaskItem.jsx           ← مهمة واحدة
+│   |── FilterButtons.jsx      ← أزرار التصفية
+│   |__ Buttondelet.jsx        ← ورار الحزف 
+|   |__ MenuButton.jsx         ← نافزه المنبثقه 
+|   |__ EditeData.jsx          ← تعديل المهام
+├── pages/
+│   └── Home.jsx               ← الصفحة الرئيسية
+│
+├── App.jsx                    ← مكون التطبيق الرئيسي
+├── index.js                   ← نقطة البداية
+│
+└── styles/
+    └── styles.css             ← التنسيقات

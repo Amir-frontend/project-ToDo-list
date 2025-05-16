@@ -1,0 +1,533 @@
+
+@import url('https://fonts.googleapis.com/css2?family=Anton&family=Dancing+Script:wght@400..700&family=Edu+AU+VIC+WA+NT+Pre:wght@600&family=Manrope:wght@200..800&family=Playwrite+RO:wght@100..400&family=Racing+Sans+One&family=Sevillana&display=swap');
+
+
+body{
+  overflow-y: hidden;
+  background-color: rgba(46, 47, 51, 0.937);
+}
+
+.container{
+    position: absolute;
+    transform: translate(-50% , -50%);
+    left:50%;
+    top: 48%;
+    width: 75%;
+    height: 80%;
+    background-color: rgba(44, 44, 44, 1);
+    text-align: center;
+    box-shadow: 1px 1px 4px 1px #ffffff3e;
+    border-radius: 15px;
+    user-select: none;
+}
+.title {
+    color: #fff;
+    position: relative;
+    font-family: 'Racing Sans One';
+    font-style: normal;
+    font-weight: 400;
+    font-size: 64px;
+    line-height: 81px;
+    flex: none;
+    order: 1;
+    flex-grow: 0;
+    margin:0;
+    margin:14px;
+    user-select: none;
+    
+  }
+  
+  .title::before {
+    content: "";
+    display: inline-block; 
+    width: 20px;
+    height: 2px;
+    background-color: #fff;
+    margin-right: 8px;
+    vertical-align: middle;
+    user-select: none;
+    
+  
+  }
+  
+  .title::before {
+    content: "";
+    display: inline-block; 
+    width: 30px;
+    height: 2px;
+    background-color: #fff;
+    vertical-align: middle;
+  }
+  
+  .title::after {
+    content: "";
+    display: inline-block; 
+    width: 30px;
+    height: 2px;
+    margin-left: 8px;
+    background-color: #fff;
+    vertical-align: middle;
+  }
+  .hr{
+    width: 45%;
+    background-color: #ffffff;
+  }
+
+.icons{
+   width: 100px;
+   height:10px;
+   position: absolute;
+   transform: translate(-50%,-50%);
+   left: 50%;
+   top: 110px;
+   background-color:rgba(44, 44, 44, 1);
+   user-select: none;
+}
+#icon{
+    color: #fff;
+    font-size: 60px;
+    z-index: 100;
+    position: absolute;
+    left: 28px;
+    top: -20px;
+    user-select: none;
+}
+
+.contenar-Add{
+    width: 100%;  
+}
+.contenar{
+  width: 80%;
+  display: flex;
+  position: relative;
+  transform: translate(-50% , 0);
+  left: 55%;
+  margin-top: 30px;
+}
+.input{
+    width: 90%;
+    height: 30px;
+    border-radius:20px;
+    padding:2px;
+    font-size: 22px ;
+    background-color: #D9D9D9;
+    padding-right: 70px;
+    outline: none;
+    padding-left: 14px;
+    
+}
+
+.button{
+    position:relative;
+    left: -69px;
+    max-width:120px;
+    height: 37px;
+    border-radius: 20px;
+    padding: 0 20px;
+    border: none;
+    background-color: rgba(7, 18, 77, 0.996);
+    color: #fff;
+    font-size: 20px;
+    font-family: 'Racing Sans One';
+    font-weight: 400;
+    width:150px;
+    display:block;
+}
+.button:hover{
+  background-color: rgba(7, 23, 114, 0.914);
+}
+.button-contenr{
+  margin: 10px;
+}
+.button-contenr .Item{
+  width: 140px;
+  margin: 6px;
+  border-radius: 13px;
+  padding: 5px;
+  border: none;
+  font-size:14px;
+  font-family:sans-serif
+}
+.hr2{
+    width: 80%;
+    margin-top:10px;
+    position: absolute;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+.tasks{  
+    width: 70%;
+    max-height:325px;
+    margin: 19px auto;
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    overflow-y:auto;
+    padding:10px 0 ;
+    transition: transform 0.9s;
+    padding-top: 7px;
+}
+.container .tasks::-webkit-scrollbar{
+ display: none;
+}
+ .task{
+   background-color: #1c1c1cb9;
+   color: #fffffff3;
+   width:90%;
+   height: auto;
+   font-size: 22px;
+   padding:10px 10px;
+   list-style: none;
+   border-radius:12px;
+   text-align: end;
+   margin-top: 5px;
+   border-radius: 12px;
+   flex-direction: row-reverse;
+}
+.task:hover{
+  background-color: #1c1c1cd4;
+}
+.task p {
+    width: 100%;
+    word-wrap: break-word;
+  }
+.task .taskMinu{
+    float: left;
+    background-color: transparent;
+    border: none;
+    color: #fff;
+   
+}
+.complet{
+  text-decoration: line-through;
+  margin: 0;
+}
+.task .taskMinu :hover{
+  transform:scale(1.1);
+}
+
+
+
+
+@media (max-width:500px) {
+    .title{
+        font-size: 30px;
+    }
+    .contener{
+        width: 90%;
+        min-height: 100vh;
+       margin-top: 20px;
+    }
+}   
+.Homemanu{  
+  width: 100%;
+  height: 100vh;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.navmanu {
+  background-color: rgba(46, 47, 51, 0.937);
+  display: flex;
+  flex-direction: column;
+  width:80px;
+  padding: 7px 3px;
+  float: left;
+  margin-right: 500px;
+  border-radius: 8px;
+  position: fixed;
+  box-shadow: 0.1px 0.1px 1px 0.1px rgba(255, 255, 255, 0.203);
+  align-items:start;
+}
+.navmanu .buttonA , .buttonB {
+  width: 100%;
+  border: none;
+  border-radius: 6px;
+  margin: 3px 0px;
+  font-size: 14px;
+  padding: 6px 8px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  font-weight: 500;
+  background-color: rgba(46, 47, 51, 0.937);
+  display: flex;
+  align-content: center;
+  justify-content: center;
+  align-items: flex-end;
+  z-index: 100;
+}
+.navmanu .buttonA{
+  color:#fff;
+ 
+}
+.navmanu .buttonB{
+  color:#b80707;
+  font-size: 16px;
+}
+.navmanu .buttonM .icon{
+  font-size: 20px;
+}
+.navmanu .buttonA:hover {
+  background-color: #414040f2;
+  color: #fff;
+}
+.navmanu .buttonB:hover {
+  background-color: #414040f2;
+  color:#ff0000;
+}
+.Item.active {
+  background-color: #3498db;
+  color: white;
+  transition: transform 1s ease;
+  
+}
+
+.ButtonDelete {
+  position: fixed;
+  width: 320px;
+  height:auto;
+  background-color: #fff;
+  z-index: 1000;
+  transform: translate(-50%, -50%);
+  left: 50%;
+  top: 50%;
+  border-radius: 12px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.2);
+  padding: 20px;
+  text-align: center;
+  transition: all 0.3s ease-in-out;
+}
+
+.ButtonDelete .titel {
+  font-size: 20px;
+  font-family: 'Segoe UI', sans-serif;
+  font-weight: bold;
+  color: #333;
+  margin-top: 5px;
+}
+
+.ButtonDelete .contaner {
+  margin-top: 30px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0 30px;
+}
+
+.ButtonDelete .contaner .Item {
+  font-size: 14px;
+  border-radius: 6px;
+  padding: 6px 34px;
+  border: none;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+.ButtonDelete .input{
+    width: 70%;
+    height: 20px;
+    border-radius:10px;
+    font-size: 17px ;
+    background-color: #D9D9D9;
+   margin: auto;
+  
+   
+  
+}
+
+.ButtonDelete .contaner .Item:first-child {
+  background-color: #bdc3c7;
+  color: 2c3e50;
+}
+
+.ButtonDelete .contaner .Item:last-child {
+  background-color: #e74c3c;
+  color: wheat;
+}
+
+.ButtonDelete .contaner .Item:hover {
+  opacity: 0.9;
+}
+
+.EditNewTask{
+  background-color: wheat;
+  position: fixed;
+  transform: translate(-50%, -50%);
+  top:50%;
+  left: 50%;
+}
+.EditInput{
+  width: 90%;
+  height: 20px;
+  background-color: rgb(209, 207, 202);
+  border-radius: 10px;
+  font-size: 16px;
+  padding: 3px 5px;
+}
+.NullTask{
+  margin: 100px;
+  color: #cfc5c5;
+   font-family:sans-serif;
+  font-size: 22px;
+}
+@media (max-width: 1100px) {
+  .container{
+    width: 85%;
+    height: 85vh;
+  }
+  .tasks{
+    width:80%;
+  }
+  .task .taskMinu{
+    float: left;
+  }
+}
+
+@media (max-width:980px) {
+  .container{
+    width: 100%;
+    height: 100vh;
+    overflow-y: hidden;
+    overflow-x: hidden;
+    top:50%;
+    border-radius:0;
+  }
+  
+  .hr2{
+    width: 100%;
+  }
+  
+}
+
+@media (max-width: 730px) {
+  .container{
+    width: 100%;
+  }
+  .contenar{
+    width: 100%;
+    margin-left: 17px;
+  }
+  .title{
+    font-size: 55px;
+  }
+  
+  .hr2{
+    width:100%;
+  }
+  .task .taskMinu{
+    float: left;
+  }
+  .tasks{
+    width:100%;
+    height: 249px;
+  }
+  .task {
+    width:85%;
+    font-size: 18px;
+    text-align: right; /* أو ممكن تخليه center لو عايز */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end; /* يخلي الأزرار والنص على اليمين */
+    gap: 10px; /* مسافة بين العناصر */
+    flex-direction: row-reverse;
+    
+  }
+
+  .task{
+    width:90%;
+    word-wrap: break-word;
+  }
+
+  .taskMinu {
+    align-self: flex-end;
+  }
+   .contenar{
+  width: 100%;
+  position: relative;
+  left: 52%;
+}
+}
+
+@media (max-width:600px){
+  .contenar{
+  width: 100%;
+  position: relative;
+  left: 50%;
+}
+  .container{
+    width: 100%;
+  }
+ .input{
+  width: 100%;
+ }
+ .title{
+  font-size: 45px;
+ }
+ .button-contenr .Item{
+  width: 120px;
+  font-size: 11px;
+ }
+
+}
+@media (max-width:500px){
+   .container{
+    width: 100%;
+  }
+.contenar{
+  width: 100%;
+  position: relative;
+  left: 55%;
+  margin-left: 14px;
+}
+ .button{
+  font-size:16px;
+ }
+}
+@media (max-width:415px){
+  .button-contenr .Item{
+    width: 105px;
+  }
+  .button{
+    width: 100px;
+    border-radius: 12px;
+    font-size: 14px;
+    padding:0;
+    left: -50px;
+  }
+  .tasks{
+    height:500px;
+  }
+  #icon{
+    font-size: 47px;
+     background-color: rgba(44, 44, 44, 1);
+    top: -40px;
+  }
+  .task p{
+    font-size: 15px;
+  }
+  .contenar-buttons{
+    width: 25px;
+    
+  }
+  .title{
+    margin: 0;
+  }
+}
+@media (max-width:371px){
+  .button-contenr .Item{
+    width: 85px;
+    font-size: 11px;
+  }
+  .title{
+    font-size: 30px;
+  }
+  #icon{
+    top:-40px;
+   background-color:rgba(44, 44, 44, 1);  }
+   .contenar{
+    min-width: 300px;
+   }
+   .button{
+    font-size: 11px;
+   }
+}
