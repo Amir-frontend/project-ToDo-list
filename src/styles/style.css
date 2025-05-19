@@ -154,44 +154,49 @@ body{
     position: absolute;
     left: 50%;
     transform: translate(-50%, -50%);
+}.tasks {
+  width: 70%;
+  max-height: 325px;
+  margin: 19px auto;
+  display: flex;
+  justify-content:flex-start;
+  flex-direction: column;
+  align-items: stretch; /* ✅ */
+  overflow-y: auto;
+  padding: 10px 0;
+  transition: transform 0.9s;
+  padding-top: 7px;
 }
-.tasks{  
-    width: 70%;
-    max-height:325px;
-    margin: 19px auto;
-    display: flex;
-    justify-content: center;
-    flex-direction: column;
-    align-items: center;
-    overflow-y:auto;
-    padding:10px 0 ;
-    transition: transform 0.9s;
-    padding-top: 7px;
+
+.container .tasks::-webkit-scrollbar {
+  display: none;
 }
-.container .tasks::-webkit-scrollbar{
- display: none;
+
+.task {
+  background-color: #1c1c1cb9;
+  color: #fffffff3;
+  width: 90%;
+  height: auto;
+  font-size: 22px;
+  padding: 10px;
+  list-style: none;
+  border-radius: 12px;
+  text-align: end;
+  margin-top: 5px;
+  display: flex;               /* ✅ */
+  flex-direction: row-reverse;
+  align-items: center
 }
- .task{
-   background-color: #1c1c1cb9;
-   color: #fffffff3;
-   width:90%;
-   height: auto;
-   font-size: 22px;
-   padding:10px 10px;
-   list-style: none;
-   border-radius:12px;
-   text-align: end;
-   margin-top: 5px;
-   border-radius: 12px;
-   flex-direction: row-reverse;
-}
-.task:hover{
+
+.task:hover {
   background-color: #1c1c1cd4;
 }
+
 .task p {
-    width: 100%;
-    word-wrap: break-word;
-  }
+  width: 100%;
+  word-wrap: break-word;
+}
+
 .task .taskMinu{
     float: left;
     background-color: transparent;
@@ -513,21 +518,47 @@ body{
     margin: 0;
   }
 }
-@media (max-width:371px){
-  .button-contenr .Item{
-    width: 85px;
-    font-size: 11px;
-  }
+@media (max-width:320px){
   .title{
-    font-size: 30px;
+    margin-top: 25px;
+    font-size: 45px;
   }
+
   #icon{
-    top:-40px;
-   background-color:rgba(44, 44, 44, 1);  }
-   .contenar{
-    min-width: 300px;
-   }
-   .button{
-    font-size: 11px;
-   }
+    margin-top: 25px;
+  }
+  .contenar{
+    width: 100%;
+    margin-left:-5px;
+}
+.input{
+  width: 210px;
+}
+.button{
+  font-size: 12px;
+  z-index: 100;
+  padding: 0 15px;
+  border-radius: 20px;
+}
+.button-contenr .Item{
+  font-size: 10px;
+  padding: 6px 10px;
+}
+  .hr2{
+    width: 270px;
+  }
+  .tasks{
+    width:310px ;
+    height: 440px;
+    display: flex;
+    align-items: center;
+  }
+  .task{
+    align-items: center
+  }
+  .contenar-buttons{
+    display: block;
+    
+  }
+  
 }

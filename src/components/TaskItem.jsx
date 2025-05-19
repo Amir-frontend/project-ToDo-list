@@ -20,15 +20,16 @@ export default function TaskItem({ task }) {
         <p style={{ margin: 0 }}>{task.name}</p>
       )}
       <div className='contenar-buttons'>
-      <button onClick={()=>setOpen(true)} className='taskMinu'><MoreVertIcon /></button>
-      
-      <button onClick={() => toggleTaskStatus(task.id)} className='taskMinu'>
+        <button onClick={() => toggleTaskStatus(task.id)} className='taskMinu'>
         {task.completed ? (
           <UndoIcon style={{ fontSize: "22px" }} />
         ) : (
           <CheckIcon style={{ fontSize: "23px" }} />
         )}
       </button>
+      <button onClick={()=>setOpen(true)} className='taskMinu'><MoreVertIcon /></button>
+      
+      
       </div>
     </li>
         
