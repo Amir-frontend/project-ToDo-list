@@ -3,10 +3,10 @@ import { TaskContext } from '../context/TaskContext';
 import '../styles/style.css';
 
 export default function ButtonDelete({ task }) {
-  const { DeleteTask, setTogelopen, setOpen } = useContext(TaskContext);
+  const { DeleteTask, setToggleOpen, setOpen } = useContext(TaskContext);
 
   const cancel = () => {
-    setTogelopen(false);
+    setToggleOpen(false);
     setOpen(false);
   };
 
@@ -18,6 +18,7 @@ export default function ButtonDelete({ task }) {
 
   const handleDelete = () => {
     DeleteTask(task.id);
+    console.log("Task  id" , task.id)
   };
 
   return (

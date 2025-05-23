@@ -1,55 +1,43 @@
-import React from 'react'
+// components/MenuButton.js
+import React from 'react';
 import DeleteOutlineIcon from '@mui/icons-material/DeleteOutline';
 import EditIcon from '@mui/icons-material/Edit';
-import { TaskContext } from '../context/TaskContext'; 
+import { TaskContext } from '../context/TaskContext';
 import { useContext } from 'react';
 import '../styles/style.css';
 import Buttondelete from './Buttondelete';
 
-
 export default function MenuButton({ task }) {
-  const { 
-    setOpen,
-    toggelopen,
-    setToggelopen ,
+  const {
+    toggleOpen,
+    setToggleOpen,
     setEdit,
-    setTaskBeingEdited
-
+    setTaskBeingEdited,
+    setTaskSelected
   } = useContext(TaskContext);
 
-  
-  
   return (
     <>
-  
-  
-  {/* القائمة الجانبية */}
-  { !toggelopen && (<><div onClick={() => {setOpen(false)}} className='Homemanu'></div>
-    <div className='navmanu'>
-        
-    <button className='buttonA' onClick={() => {
-  setEdit(true);
-  setTaskBeingEdited(task); // ⬅️ هنا بتحدد أي مهمة بتعدلها
-  setOpen(false);
-}}>
-  <EditIcon /> Edit
-</button>
+      {!toggleOpen && (
+        <>
+          <div onClick={() => setTaskSelected(null)} className='Homemanu'></div>
+          <div className='navmanu'>
+            <button className='buttonA' onClick={() => {
+              setEdit(true);
+              setTaskBeingEdited(task);
+              setTaskSelected(null);
+            }}>
+              <EditIcon /> Edit
+            </button>
 
+            <button className='buttonB' onClick={() => setToggleOpen(true)}>
+              <DeleteOutlineIcon /> Delete
+            </button>
+          </div>
+        </>
+      )}
 
-      <button className='buttonB' onClick={() =>setToggelopen(true)}>
-        <DeleteOutlineIcon /> Delete
-      </button>
-    </div></>
-  )}
-
-  
-
-  {/* نافذة التأكيد للحذف */}
-  {toggelopen && (
-    <Buttondelete task={task} />
-  )}
-   
-</>
-
+      {toggleOpen && <Buttondelete task={task} />}
+    </>
   );
 }

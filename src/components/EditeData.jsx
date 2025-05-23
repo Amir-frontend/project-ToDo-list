@@ -1,26 +1,43 @@
-import React, { useContext, useState } from 'react';
+import React, { useContext, useState, useEffect } from 'react';
 import { TaskContext } from '../context/TaskContext';
-import '../styles/style.css';
 
-export default function UpdateData({ task }) {
-  const { EditTask, setEdit } = useContext(TaskContext);
-  const [Newtask, setNewtask] = useState(task?.name || "");
+export default function EditeData() {
+  const { EditTask, setEdit, taskBeingEdited, setTaskBeingEdited } = useContext(TaskContext);
+  const [Newtask, setNewtask] = useState("");
+
+  useEffect(() => {
+    if (taskBeingEdited) {
+      setNewtask(taskBeingEdited.name);
+    }
+  }, [taskBeingEdited]);
+
+  const handleSave = () => {
+    if (!taskBeingEdited) return;
+    EditTask(taskBeingEdited.id, Newtask);
+    setTaskBeingEdited(null);
+    setEdit(false);
+  };
+
+  const handleCancel = () => {
+    setTaskBeingEdited(null);
+    setEdit(false);
+  };
 
   return (
     <div className='ButtonDelete'>
       <p className='titel'>Modify Task</p>
-      <input 
+      <input
         className='EditInput'
-        type='text' 
-        value={Newtask} 
-        onChange={(e) => setNewtask(e.target.value)} 
+        type='text'
+        value={Newtask}
+        onChange={(e) => setNewtask(e.target.value)}
         onKeyDown={(e) => {
-          if (e.key === 'Enter') EditTask(task.id, Newtask);
+          if (e.key === 'Enter') handleSave();
         }}
       />
       <div className='contaner'>
-        <button className='Item' onClick={() => setEdit(false)}>Cancel</button>
-        <button className='Item' onClick={() => EditTask(task.id, Newtask)}>Save</button>
+        <button className='Item' onClick={handleCancel}>Cancel</button>
+        <button className='Item' onClick={handleSave}>Save</button>
       </div>
     </div>
   );
